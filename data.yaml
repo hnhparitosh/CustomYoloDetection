@@ -1,1 +1,9 @@
-train: dataset/images
+
+path: D:/machine_learning/orderstack/dataset # dataset root dir
+train: images
+val: images
+
+names:
+  0: column
+  1: header
+  2: table
