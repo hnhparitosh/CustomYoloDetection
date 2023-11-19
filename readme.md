@@ -27,10 +27,17 @@ This project contains code to train an object detection model on a custom datase
   - mAP50: `0.948`
   - mAP50-95: `0.738`
 
+- Here is the Confusion Matrix: 
+
+![Confusion Matrix](assets/cm.png)
+
+- Here is the Loss Curve:
+
+![Loss Curve](assets/loss.png)
 
 ### Installation and Inference
-To run the code, first install the library 
-Ultralytics:
+
+To run the code, first install the library `Ultralytics`:
 
 ```bash
 pip install ultralytics
@@ -38,21 +45,36 @@ pip install ultralytics
 
 Extract the dataset in the dataset folder and run the train.ipynb.
 
-Improvements
-There are several ways using which we can further improve the accuracy of the model like:
 
-By increasing the size of the dataset as 117 images are very less.
-By increasing the number of epochs for training from 25 to say 100.
-Can experiment with other models like Masked RNNs for object detection of YOLO NAS or YOLOx, etc.
-
-Instead of training the YOLOv8 ‘nano’ model, the ‘large’ variant can be used for better and robust results.
-Inference
 For making an inference from the model, you can just run the last cell from the train.ipynb:
 
+```
 model.predict('filename.jpg')
+```
 
 Or run the tornado web server:
 
+(Tornado Server and inference script is not ready yet. Will be updated soon.)
+
+```bash
 pip install tornado
 python tornadoApp.py
 python inference.py
+```
+
+
+Given Below is the sample output of the inference script:
+
+![Sample Output](assets/sample_output.png)
+
+### Improvements
+
+There are several ways using which we can further improve the accuracy of the model like:
+
+- By increasing the size of the dataset as `117 images` are very less.
+- By increasing the number of epochs for training from `25` to say `100`.
+- Can experiment with other models like Masked RNNs for object detection of `YOLO NAS` or `YOLOx`, etc.
+- Instead of training the `YOLOv8 nano` model, the `large` variant can be used for better and robust results.
+Inference
+
+Please leave a ⭐ if you like the project. Thanks! 💖
